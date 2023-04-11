@@ -353,7 +353,7 @@ function Contributor(props) {
           }}
         />
         <Box component={CardContent} position={'relative'}>
-          <Box display="flex" justifyContent="space-between" marginBottom={1}>
+          <Box display="flex" justifyContent="space-between">
             <Typography textAlign="center" fontWeight={700}>
               {props.name}
             </Typography>
