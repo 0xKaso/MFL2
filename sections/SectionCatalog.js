@@ -46,12 +46,7 @@ function CatalogItem(props) {
         </Typography>
         <Box>{props.children}</Box>
       </Box>
-      <Box
-        component={'img'}
-        width="100%"
-        src={props.image}
-        marginBottom="48px"
-      />
+      <Box component={'img'} width="100%" src={props.image} marginBottom="48px" />
     </Box>
   );
 }
@@ -82,12 +77,7 @@ export default function SectionCatalog() {
   return (
     <Box bgcolor={'alternate.main'} id="catalog-section">
       <Container>
-        <Box
-          bgcolor="#eff1f7"
-          position="relative"
-          borderRadius={10}
-          margin="0 auto"
-        >
+        <Box bgcolor="#eff1f7" position="relative" borderRadius={10} margin="0 auto">
           <Box
             display="flex"
             justifyContent="center"
@@ -108,116 +98,33 @@ export default function SectionCatalog() {
             top={{ xs: '-30px', sm: '-40px', md: '-50px', lg: '-75px' }}
             marginLeft={{ xs: '-30px', sm: '-40px', md: '-50px', lg: '-75px' }}
           >
-            <Box
-              width={{ xs: '45px', sm: '60px', md: '80px', lg: '100px' }}
-              component={'img'}
-              src={'/icons/logo.svg'}
-            />
+            <Box width={{ xs: '45px', sm: '60px', md: '80px', lg: '100px' }} component={'img'} src={'/icons/logo.svg'} />
           </Box>
-          <Box
-            paddingY={{ xs: 6, sm: 8, md: 16 }}
-            paddingX={{ xs: 2, sm: 4, md: 4 }}
-            display="flex"
-          >
-            <Grid
-              sx={{ flexGrow: 1, alignItems: 'stretch' }}
-              container
-              direction="row"
-              spacing={4}
-            >
+          <Box paddingY={{ xs: 6, sm: 8, md: 16 }} paddingX={{ xs: 2, sm: 4, md: 4 }} display="flex">
+            <Grid sx={{ flexGrow: 1, alignItems: 'stretch' }} container direction="row" spacing={4}>
               <Grid item sm={12} md={6} lg={4}>
-                <CatalogItem
-                  titleBgColor="#FFFEA6"
-                  title={t`sectiontitle-10`}
-                  image="/images/catalog-1.png"
-                  catalogId="catalog1"
-                >
-                  <SectionSubtitle
-                    title={t`sectionBlockchain-title-1`}
-                    id="section/blockchain"
-                    color="#FFFEA6"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionBTC-title-10`}
-                    id="section/btc"
-                    color="#FFFEA6"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionComponents-title-10`}
-                    id="section/components"
-                    color="#FFFEA6"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionETH-title-10`}
-                    isLastSubtitle
-                    id="section/ethereum"
-                    color="#FFFEA6"
-                  />
+                <CatalogItem titleBgColor="#FFFEA6" title={t`sectiontitle-10`} image="/images/catalog-1.png" catalogId="catalog1">
+                  <SectionSubtitle title={t`sectionBlockchain-title-1`} id="section/blockchain" color="#FFFEA6" />
+                  <SectionSubtitle title={t`sectionBTC-title-10`} id="section/btc" color="#FFFEA6" />
+                  <SectionSubtitle title={t`sectionComponents-title-10`} id="section/components" color="#FFFEA6" />
+                  <SectionSubtitle title={t`sectionETH-title-10`} isLastSubtitle id="section/ethereum" color="#FFFEA6" />
                 </CatalogItem>
               </Grid>
               <Grid item sm={12} md={6} lg={4}>
-                <CatalogItem
-                  titleBgColor="#CBCDFB"
-                  title={t`sectiontitle-11`}
-                  image="/images/catalog-2.png"
-                  catalogId="catalog2"
-                >
-                  <SectionSubtitle
-                    title={t`sectionNFT-title-10`}
-                    id="section/nft"
-                    color="#CBCDFB"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionNFTValue-title-22`}
-                    id="section/nftvalues"
-                    color="#CBCDFB"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionDYOR-title-10`}
-                    isLastSubtitle
-                    id="section/dyor"
-                    color="#CBCDFB"
-                  />
+                <CatalogItem titleBgColor="#CBCDFB" title={t`sectiontitle-11`} image="/images/catalog-2.png" catalogId="catalog2">
+                  <SectionSubtitle title={t`sectionNFT-title-10`} id="section/nft" color="#CBCDFB" />
+                  <SectionSubtitle title={t`sectionNFTValue-title-22`} id="section/nftvalues" color="#CBCDFB" />
+                  <SectionSubtitle title={t`sectionDYOR-title-10`} isLastSubtitle id="section/dyor" color="#CBCDFB" />
                 </CatalogItem>
               </Grid>
               <Grid item sm={12} md={6} lg={4}>
-                <CatalogItem
-                  titleBgColor="#FBBD78"
-                  title={t`sectiontitle-12`}
-                  titleVariant={'h6'}
-                  image="/images/catalog-3.png"
-                  catalogId="catalog3"
-                >
-                  <SectionSubtitle
-                    title={t`sectionWallet-title-10`}
-                    id="section/wallet"
-                    color="#FBBD78"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionSecurity-title-10`}
-                    id="section/security"
-                    color="#FBBD78"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionGetETH-content-34`}
-                    id="section/get-eth"
-                    color="#FBBD78"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionConnectWallet-title-10`}
-                    id="section/connect-wallet"
-                    color="#FBBD78"
-                  />
-                  <SectionSubtitle
-                    title={t`mintRecord-content-16`}
-                    id="section/mint"
-                    color="#FBBD78"
-                  />
-                  <SectionSubtitle
-                    title={t`sectionDiscord-title-10`}
-                    id="section/discord"
-                    color="#FBBD78"
-                  />
+                <CatalogItem titleBgColor="#FBBD78" title={t`sectiontitle-12`} titleVariant={'h6'} image="/images/catalog-3.png" catalogId="catalog3">
+                  <SectionSubtitle title={t`sectionWallet-title-10`} id="section/wallet" color="#FBBD78" />
+                  <SectionSubtitle title={t`sectionSecurity-title-10`} id="section/security" color="#FBBD78" />
+                  <SectionSubtitle title={t`sectionGetETH-content-34`} id="section/get-eth" color="#FBBD78" />
+                  <SectionSubtitle title={t`sectionConnectWallet-title-10`} id="section/connect-wallet" color="#FBBD78" />
+                  <SectionSubtitle title={t`mintRecord-content-16`} id="section/mint" color="#FBBD78" />
+                  <SectionSubtitle title={t`sectionDiscord-title-10`} id="section/discord" color="#FBBD78" />
                 </CatalogItem>
               </Grid>
             </Grid>

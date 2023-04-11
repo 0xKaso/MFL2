@@ -42,18 +42,10 @@ export default function Home() {
           <Head>
             <meta charSet="utf-8" />
             <link rel="icon" href="/favicon.png" />
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no"
-            />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <title>
-              My First NFT | A non-profit instructional project for Web3
-              newbies. Get a FREE NFT while learning about Web3, underlying
-              values of NFT, and security principles.
+              My First NFT | A non-profit instructional project for Web3 newbies. Get a FREE NFT while learning about Web3, underlying values of NFT, and security principles.
             </title>
             <meta
               name="description"
@@ -76,16 +68,10 @@ export default function Home() {
             <meta property="og:url" content="https://myfirstnft.info/" />
 
             <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-              rel="stylesheet"
-            />
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
             {/* Global Site Tag (gtag.js) - Google Analytics */}
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-            />
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <script
               dangerouslySetInnerHTML={{
                 __html: `
@@ -101,17 +87,13 @@ export default function Home() {
           </Head>
           <Main>
             <TopSection />
-            {/* <SectionCatalog /> */}
-            {/* <SectionTitle
-              bgcolor="#FFFEA6"
-              title={t`sectiontitle-10`}
-              id="catalog1"
-            >
+            <SectionCatalog />
+            <SectionTitle bgcolor="#FFFEA6" title={t`sectiontitle-10`} id="catalog1">
               <SectionBlockchain />
               <SectionBTC />
               <SectionComponents />
               <SectionETH />
-            </SectionTitle> */}
+            </SectionTitle>
             {/* <SectionTitle
               bgcolor="#CBCDFB"
               title={t`sectiontitle-11`}
