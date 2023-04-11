@@ -7,26 +7,26 @@ import useWallet, { WalletContext } from '../hooks/useWallet';
 import useMintData, { MintDataContext } from '../hooks/useMintData';
 import FixedTools from '../components/FixedTools';
 
-import SectionTitle from '../sections/SectionTitle';
-import TopSection from '../sections/TopSection';
-import SectionCatalog from '../sections/SectionCatalog';
-import SectionBlockchain from '../sections/SectionBlockchain';
-import SectionComponents from '../sections/SectionComponents';
-import SectionETH from '../sections/SectionETH';
-import SectionBTC from '../sections/SectionBTC';
-import SectionWallet from '../sections/SectionWallet';
-import SectionSecurity from '../sections/SectionSecurity';
-import SectionGetETH from '../sections/SectionGetETH';
-import SectionConnectWallet from '../sections/SectionConnectWallet';
-import SectionMint from '../sections/SectionMint';
-import SectionNFT from '../sections/SectionNFT';
-import SectionNFTValue from '../sections/SectionNFTValue';
-import SectionNext from '../sections/SectionNext';
-import SectionPartners from '../sections/SectionPartners';
-import SectionTeam from '../sections/SectionTeam';
-import SectionDiscord from '../sections/SectionDiscord';
-import SectionDYOR from '../sections/SectionDYOR';
-import SectionFooter from '../sections/SectionFooter';
+import SectionTitle from '../sections/Title';
+import TopSection from '../sections/Top';
+import SectionCatalog from '../sections/Catalog';
+import SectionBlockchain from '../sections/Blockchain';
+import SectionComponents from '../sections/Components';
+import SectionETH from '../sections/ETH';
+import SectionBTC from '../sections/BTC';
+import SectionWallet from '../sections/Wallet';
+import SectionSecurity from '../sections/Security';
+import SectionGetETH from '../sections/GetETH';
+import SectionConnectWallet from '../sections/ConnectWallet';
+import SectionMint from '../sections/Mint';
+import SectionNFT from '../sections/NFT';
+import SectionNFTValue from '../sections/NFTValue';
+import SectionNext from '../sections/Next';
+import SectionPartners from '../sections/Partners';
+import SectionTeam from '../sections/Team';
+import SectionDiscord from '../sections/Discord';
+import SectionDYOR from '../sections/DYOR';
+import SectionFooter from '../sections/Footer';
 import { LXDAOIntroduction } from 'lxdao-ui';
 import { Box } from '@mui/system';
 
@@ -94,27 +94,19 @@ export default function Home() {
               <SectionComponents />
               <SectionETH />
             </SectionTitle>
-            {/* <SectionTitle
-              bgcolor="#CBCDFB"
-              title={t`sectiontitle-11`}
-              id="catalog2"
-            >
+            <SectionTitle bgcolor="#CBCDFB" title={t`sectiontitle-11`} id="catalog2">
               <SectionNFT />
               <SectionNFTValue />
               <SectionDYOR />
-            </SectionTitle> */}
-            {/* <SectionTitle
-              bgcolor="#FBBD78"
-              title={t`sectiontitle-12`}
-              id="catalog3"
-            >
+            </SectionTitle>
+            <SectionTitle bgcolor="#FBBD78" title={t`sectiontitle-12`} id="catalog3">
               <SectionWallet />
               <SectionSecurity />
               <SectionGetETH />
               <SectionConnectWallet />
               <SectionMint />
               <SectionDiscord />
-            </SectionTitle> */}
+            </SectionTitle>
             {/* <SectionNext /> */}
             <SectionPartners />
             <SectionTeam />

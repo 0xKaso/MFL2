@@ -3,7 +3,7 @@ import { Link, Box } from '@mui/material';
 import _ from 'lodash';
 import { t } from '@lingui/macro';
 import showMessage from '../components/showMessage';
-import SectionSimpleWrapper from './SectionSimpleWrapper';
+import SectionSimpleWrapper from './SimpleWrapper';
 
 const communities = [
   {
@@ -63,12 +63,7 @@ export default function SectionTeam() {
     <SectionSimpleWrapper title={t`sectionPartners-des-1`} id="partners">
       <Box display="flex" flexWrap="wrap" justifyContent={'center'}>
         {_.shuffle(communities).map((item, i) => (
-          <Box
-            maxWidth="100px"
-            marginBottom={{ xs: 2 }}
-            marginRight={{ xs: 1, sm: 6, md: 12 }}
-            key={i}
-          >
+          <Box maxWidth="100px" marginBottom={{ xs: 2 }} marginRight={{ xs: 1, sm: 6, md: 12 }} key={i}>
             <Link color={'inherit'} target="_blank" href={item.url}>
               <Box
                 component="img"
@@ -87,11 +82,7 @@ export default function SectionTeam() {
             </Link>
           </Box>
         ))}
-        <Box
-          width="100px"
-          marginBottom={{ xs: 2 }}
-          marginRight={{ xs: 1, sm: 6, md: 12 }}
-        >
+        <Box width="100px" marginBottom={{ xs: 2 }} marginRight={{ xs: 1, sm: 6, md: 12 }}>
           <Box
             sx={{
               cursor: 'pointer',
@@ -107,24 +98,13 @@ export default function SectionTeam() {
                 title: 'How to collab?',
                 body: (
                   <Box>
-                    <Box marginBottom={2}>
-                      In general, show your supportive is fine, for example:
-                    </Box>
+                    <Box marginBottom={2}>In general, show your supportive is fine, for example:</Box>
                     <Box>- Retweet our tweets</Box>
-                    <Box>
-                      - Post link in your community Discord server, or groups
-                    </Box>
-                    <Box marginBottom={2}>
-                      - Add a friendship link to your official Website (for
-                      teaching newbies)
-                    </Box>
+                    <Box>- Post link in your community Discord server, or groups</Box>
+                    <Box marginBottom={2}>- Add a friendship link to your official Website (for teaching newbies)</Box>
                     <Box>
                       Contact Twitter:{' '}
-                      <Link
-                        target="_blank"
-                        color={'inherit'}
-                        href={`https://twitter.com/mfnft_official`}
-                      >
+                      <Link target="_blank" color={'inherit'} href={`https://twitter.com/mfnft_official`}>
                         @mfnft_official
                       </Link>
                     </Box>

@@ -1,25 +1,10 @@
 import React, { useEffect, useContext } from 'react';
-import {
-  Box,
-  Typography,
-  Checkbox,
-  FormControlLabel,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Box, Typography, Checkbox, FormControlLabel, useMediaQuery, useTheme } from '@mui/material';
 import { t } from '@lingui/macro';
 import { ProgressContext } from '../hooks/useProgress';
 
-export default function SectionWrapper({
-  id,
-  title,
-  description,
-  children,
-  showMarkDone = true,
-  sectionColor = '#FFFEA6',
-}) {
-  const { setSteps, completeStep, redoStep, completed } =
-    useContext(ProgressContext);
+export default function SectionWrapper({ id, title, description, children, showMarkDone = true, sectionColor = '#FFFEA6' }) {
+  const { setSteps, completeStep, redoStep, completed } = useContext(ProgressContext);
   const theme = useTheme();
 
   const isDone = completed[id];
@@ -48,20 +33,9 @@ export default function SectionWrapper({
   const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box
-      padding={{ xs: 2, md: 4 }}
-      paddingBottom={{ xs: 4, md: 6 }}
-      position="relative"
-      className="section"
-      id={`section/${id}`}
-      ref={ref}
-    >
+    <Box padding={{ xs: 2, md: 4 }} paddingBottom={{ xs: 4, md: 6 }} position="relative" className="section" id={`section/${id}`} ref={ref}>
       <Box>
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          flexDirection={smallScreen ? 'column' : 'row'}
-        >
+        <Box display="flex" justifyContent="space-between" flexDirection={smallScreen ? 'column' : 'row'}>
           {smallScreen ? null : (
             <Box width={112} display="flex" justifyContent="center">
               <Box
@@ -104,10 +78,7 @@ export default function SectionWrapper({
             </Typography>
           </Box>
           {!smallScreen && showMarkDone && (
-            <Box
-              marginLeft={smallScreen ? 0 : 2}
-              marginBottom={smallScreen ? 2 : 0}
-            >
+            <Box marginLeft={smallScreen ? 0 : 2} marginBottom={smallScreen ? 2 : 0}>
               <FormControlLabel
                 sx={{
                   display: 'flex',
@@ -119,39 +90,13 @@ export default function SectionWrapper({
                     key={isDone}
                     checked={isDone}
                     icon={
-                      <Box
-                        border="3px solid #000"
-                        borderRadius={'50%'}
-                        width={40}
-                        height={40}
-                        display="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                        bgcolor="#FEFFFE"
-                      >
-                        <Box
-                          width="26px"
-                          component={'img'}
-                          src={'/icons/logo.svg'}
-                        />
+                      <Box border="3px solid #000" borderRadius={'50%'} width={40} height={40} display="flex" justifyContent="center" alignItems="center" bgcolor="#FEFFFE">
+                        <Box width="26px" component={'img'} src={'/icons/logo.svg'} />
                       </Box>
                     }
                     checkedIcon={
-                      <Box
-                        border="3px solid #000"
-                        borderRadius={'50%'}
-                        width={40}
-                        height={40}
-                        display="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                        bgcolor={sectionColor}
-                      >
-                        <Box
-                          width="26px"
-                          component={'img'}
-                          src={'/icons/marked.svg'}
-                        />
+                      <Box border="3px solid #000" borderRadius={'50%'} width={40} height={40} display="flex" justifyContent="center" alignItems="center" bgcolor={sectionColor}>
+                        <Box width="26px" component={'img'} src={'/icons/marked.svg'} />
                       </Box>
                     }
                     sx={{
@@ -167,14 +112,7 @@ export default function SectionWrapper({
                   />
                 }
                 label={
-                  <Typography
-                    fontWeight="400"
-                    fontSize={16}
-                    marginTop={1}
-                    display="inline-block"
-                    width={122}
-                    textAlign="center"
-                  >
+                  <Typography fontWeight="400" fontSize={16} marginTop={1} display="inline-block" width={122} textAlign="center">
                     {isDone ? t`Marked` : t`Mark-done`}
                   </Typography>
                 }
@@ -196,34 +134,12 @@ export default function SectionWrapper({
                   key={isDone}
                   checked={isDone}
                   icon={
-                    <Box
-                      border="3px solid #000"
-                      borderRadius={'50%'}
-                      width={40}
-                      height={40}
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                      bgcolor="#FEFFFE"
-                    >
-                      <Box
-                        width="26px"
-                        component={'img'}
-                        src={'/icons/logo.svg'}
-                      />
+                    <Box border="3px solid #000" borderRadius={'50%'} width={40} height={40} display="flex" justifyContent="center" alignItems="center" bgcolor="#FEFFFE">
+                      <Box width="26px" component={'img'} src={'/icons/logo.svg'} />
                     </Box>
                   }
                   checkedIcon={
-                    <Box
-                      border="3px solid #000"
-                      borderRadius={'50%'}
-                      width={40}
-                      height={40}
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                      bgcolor={sectionColor}
-                    >
+                    <Box border="3px solid #000" borderRadius={'50%'} width={40} height={40} display="flex" justifyContent="center" alignItems="center" bgcolor={sectionColor}>
                       <Box
                         width="26px"
                         component={'img'}
@@ -247,14 +163,7 @@ export default function SectionWrapper({
                 />
               }
               label={
-                <Typography
-                  fontWeight="400"
-                  fontSize={16}
-                  marginTop={1}
-                  display="inline-block"
-                  width={122}
-                  textAlign="center"
-                >
+                <Typography fontWeight="400" fontSize={16} marginTop={1} display="inline-block" width={122} textAlign="center">
                   {isDone ? t`Marked` : t`Mark-done`}
                 </Typography>
               }

@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Link,
-  Grid,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-  FormLabel,
-} from '@mui/material';
+import { Box, Typography, Link, Grid, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@mui/material';
 import { t } from '@lingui/macro';
 import { Step } from '../components/Stepper';
 import LightImage from '../components/LightImage';
 
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from './Wrapper';
 
 export default function SectionGetETH() {
   const [hasEth, setHasEth] = useState();
@@ -51,11 +41,7 @@ export default function SectionGetETH() {
         <Step index={2} label={t`sectionGetETH-content-19`}>
           <Typography variant="body1" marginBottom={2}>
             {t`sectionGetETH-content-20`}{' '}
-            <Link
-              target="_blank"
-              color={'inherit'}
-              href={'https://etherscan.io/chart/etherprice'}
-            >
+            <Link target="_blank" color={'inherit'} href={'https://etherscan.io/chart/etherprice'}>
               https://etherscan.io/chart/etherprice
             </Link>{' '}
             {t`sectionGetETH-content-21`}
@@ -82,11 +68,7 @@ export default function SectionGetETH() {
           <Typography variant="body1">{t`sectionGetETH-content-28`}</Typography>
           <Typography variant="body1">
             - {t`sectionGetETH-content-29`}{' '}
-            <Link
-              target="_blank"
-              color={'inherit'}
-              href={'https://www.binance.com/'}
-            >
+            <Link target="_blank" color={'inherit'} href={'https://www.binance.com/'}>
               https://www.binance.com/
             </Link>
           </Typography>
@@ -98,21 +80,13 @@ export default function SectionGetETH() {
           </Typography>
           <Typography variant="body1">
             - Huobi{' '}
-            <Link
-              target="_blank"
-              color={'inherit'}
-              href={'https://www.huobi.com/'}
-            >
+            <Link target="_blank" color={'inherit'} href={'https://www.huobi.com/'}>
               https://www.huobi.com/
             </Link>
           </Typography>
           <Typography variant="body1">
             - OKX{' '}
-            <Link
-              target="_blank"
-              color={'inherit'}
-              href={'https://www.okx.com/'}
-            >
+            <Link target="_blank" color={'inherit'} href={'https://www.okx.com/'}>
               https://www.okx.com/
             </Link>
           </Typography>
@@ -127,11 +101,7 @@ export default function SectionGetETH() {
 
           <Typography marginTop={2} variant="body1">
             {t`sectionGetETH-content-33`}{' '}
-            <Link
-              target="_blank"
-              color={'inherit'}
-              href={'https://ethereum.org/'}
-            >
+            <Link target="_blank" color={'inherit'} href={'https://ethereum.org/'}>
               https://ethereum.org/
             </Link>
           </Typography>
@@ -141,26 +111,11 @@ export default function SectionGetETH() {
   }
 
   return (
-    <SectionWrapper
-      title={t`sectionGetETH-content-34`}
-      description={t`sectionGetETH-content-35`}
-      id="get-eth"
-      sectionColor="#FBBD78"
-    >
-      <Typography
-        variant={'h6'}
-        component={'p'}
-        color={'text.secondary'}
-        align={'center'}
-      >
+    <SectionWrapper title={t`sectionGetETH-content-34`} description={t`sectionGetETH-content-35`} id="get-eth" sectionColor="#FBBD78">
+      <Typography variant={'h6'} component={'p'} color={'text.secondary'} align={'center'}>
         {t`sectionGetETH-content-36`}
       </Typography>
-      <Typography
-        component={'p'}
-        align={'center'}
-        marginBottom={4}
-        fontWeight={700}
-      >
+      <Typography component={'p'} align={'center'} marginBottom={4} fontWeight={700}>
         {t`sectionGetETH-legal-notice`}
       </Typography>
 
@@ -177,16 +132,8 @@ export default function SectionGetETH() {
                 setHasFrens(undefined);
               }}
             >
-              <FormControlLabel
-                value="true"
-                control={<Radio />}
-                label={t`sectionGetETH-content-38`}
-              />
-              <FormControlLabel
-                value="false"
-                control={<Radio />}
-                label={t`sectionGetETH-content-39`}
-              />
+              <FormControlLabel value="true" control={<Radio />} label={t`sectionGetETH-content-38`} />
+              <FormControlLabel value="false" control={<Radio />} label={t`sectionGetETH-content-39`} />
             </RadioGroup>
           </FormControl>
           {hasEth === 'false' && (
@@ -200,16 +147,8 @@ export default function SectionGetETH() {
                   setHasFrens(event.target.value);
                 }}
               >
-                <FormControlLabel
-                  value="true"
-                  control={<Radio />}
-                  label={t`sectionGetETH-content-41`}
-                />
-                <FormControlLabel
-                  value="false"
-                  control={<Radio />}
-                  label={t`sectionGetETH-content-42`}
-                />
+                <FormControlLabel value="true" control={<Radio />} label={t`sectionGetETH-content-41`} />
+                <FormControlLabel value="false" control={<Radio />} label={t`sectionGetETH-content-42`} />
               </RadioGroup>
             </FormControl>
           )}

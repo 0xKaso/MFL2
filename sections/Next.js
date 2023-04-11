@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Link,
-  Card,
-  Button,
-  Box,
-  Typography,
-  Grid,
-  CardContent,
-  CardActions,
-} from '@mui/material';
+import { Link, Card, Button, Box, Typography, Grid, CardContent, CardActions } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { t } from '@lingui/macro';
 import AddIcon from '@mui/icons-material/Add';
@@ -16,7 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import DonationInstruction from '../components/Donation';
 import showMessage from '../components/showMessage';
 import StyledToolTip from '../components/StyledToolTip';
-import SectionSimpleWrapper from './SectionSimpleWrapper';
+import SectionSimpleWrapper from './SimpleWrapper';
 import donation from '../donation';
 
 function SmallAd(props) {
@@ -29,13 +20,7 @@ function SmallAd(props) {
           textDecoration: 'none',
         }}
       >
-        <Box
-          width={1}
-          height={1}
-          display={'flex'}
-          flexDirection={'column'}
-          position="relative"
-        >
+        <Box width={1} height={1} display={'flex'} flexDirection={'column'} position="relative">
           <DonationInstruction />
         </Box>
       </Box>
@@ -52,55 +37,29 @@ function SmallAd(props) {
     >
       <StyledToolTip
         title={
-          <Box
-            component={Card}
-            display={'flex'}
-            flexDirection={'column'}
-            width="188px"
-            padding={1}
-          >
+          <Box component={Card} display={'flex'} flexDirection={'column'} width="188px" padding={1}>
             <Typography variant={'body2'} color="text.secondary">
               {props.description}
             </Typography>
             <Box marginTop={2}>
               {props.website && (
                 <Link color={'inherit'} target="_blank" href={props.website}>
-                  <Box
-                    color="#ccc"
-                    width="40px"
-                    component="img"
-                    src="/icons/website.svg"
-                  />
+                  <Box color="#ccc" width="40px" component="img" src="/icons/website.svg" />
                 </Link>
               )}
               {props.twitter && (
                 <Link color={'inherit'} target="_blank" href={props.twitter}>
-                  <Box
-                    width="40px"
-                    color="text.secondary"
-                    component="img"
-                    src="/icons/twitter.svg"
-                  />
+                  <Box width="40px" color="text.secondary" component="img" src="/icons/twitter.svg" />
                 </Link>
               )}
               {props.opensea && (
                 <Link color={'inherit'} target="_blank" href={props.opensea}>
-                  <Box
-                    width="40px"
-                    color="text.secondary"
-                    component="img"
-                    src="/icons/opensea.svg"
-                  />
+                  <Box width="40px" color="text.secondary" component="img" src="/icons/opensea.svg" />
                 </Link>
               )}
               {props.discord && (
                 <Link color={'inherit'} target="_blank" href={props.discord}>
-                  <Box
-                    width="40px"
-                    color="text.secondary"
-                    component="img"
-                    src="/icons/discord.svg"
-                  />
+                  <Box width="40px" color="text.secondary" component="img" src="/icons/discord.svg" />
                 </Link>
               )}
             </Box>
@@ -110,32 +69,17 @@ function SmallAd(props) {
           </Box>
         }
       >
-        <Box
-          component={Card}
-          width={1}
-          height={1}
-          display={'flex'}
-          flexDirection={'column'}
-        >
+        <Box component={Card} width={1} height={1} display={'flex'} flexDirection={'column'}>
           <Box
             component="img"
             src={props.image}
             title={props.title}
             sx={{
               width: '100%',
-              filter:
-                props.theme.palette.mode === 'dark'
-                  ? 'brightness(0.7)'
-                  : 'none',
+              filter: props.theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
             }}
           />
-          <Box
-            padding="12px !important"
-            component={CardContent}
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-          >
+          <Box padding="12px !important" component={CardContent} display="flex" justifyContent="space-between" alignItems="center">
             <Typography
               variant={'body1'}
               sx={{
@@ -176,13 +120,7 @@ function BigAd(props) {
           textDecoration: 'none',
         }}
       >
-        <Box
-          width={1}
-          height={1}
-          display={'flex'}
-          flexDirection={'column'}
-          position="relative"
-        >
+        <Box width={1} height={1} display={'flex'} flexDirection={'column'} position="relative">
           <DonationInstruction />
         </Box>
       </Box>
@@ -201,21 +139,14 @@ function BigAd(props) {
         },
       }}
     >
-      <Box
-        component={Card}
-        width={1}
-        height={1}
-        display={'flex'}
-        flexDirection={'column'}
-      >
+      <Box component={Card} width={1} height={1} display={'flex'} flexDirection={'column'}>
         <Box
           component="img"
           src={props.image}
           title={props.title}
           sx={{
             width: '100%',
-            filter:
-              props.theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+            filter: props.theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
           }}
         />
         <Box component={CardContent}>
@@ -227,51 +158,26 @@ function BigAd(props) {
           </Typography>
         </Box>
         <Box flexGrow={1} />
-        <Box
-          paddingLeft={2}
-          paddingRight={2}
-          component={CardActions}
-          justifyContent={'space-between'}
-        >
+        <Box paddingLeft={2} paddingRight={2} component={CardActions} justifyContent={'space-between'}>
           <Box>
             {props.website && (
               <Link color={'inherit'} target="_blank" href={props.website}>
-                <Box
-                  color="#ccc"
-                  width="40px"
-                  component="img"
-                  src="/icons/website.svg"
-                />
+                <Box color="#ccc" width="40px" component="img" src="/icons/website.svg" />
               </Link>
             )}
             {props.twitter && (
               <Link color={'inherit'} target="_blank" href={props.twitter}>
-                <Box
-                  width="40px"
-                  color="text.secondary"
-                  component="img"
-                  src="/icons/twitter.svg"
-                />
+                <Box width="40px" color="text.secondary" component="img" src="/icons/twitter.svg" />
               </Link>
             )}
             {props.opensea && (
               <Link color={'inherit'} target="_blank" href={props.opensea}>
-                <Box
-                  width="40px"
-                  color="text.secondary"
-                  component="img"
-                  src="/icons/opensea.svg"
-                />
+                <Box width="40px" color="text.secondary" component="img" src="/icons/opensea.svg" />
               </Link>
             )}
             {props.discord && (
               <Link color={'inherit'} target="_blank" href={props.discord}>
-                <Box
-                  width="40px"
-                  color="text.secondary"
-                  component="img"
-                  src="/icons/discord.svg"
-                />
+                <Box width="40px" color="text.secondary" component="img" src="/icons/discord.svg" />
               </Link>
             )}
           </Box>
@@ -291,20 +197,12 @@ export default function SectionNext() {
   const rest = donation.slice(4);
 
   return (
-    <SectionSimpleWrapper
-      title={t`sectionNext-title-10`}
-      description={t`sectionNext-title-11`}
-      id="next"
-    >
+    <SectionSimpleWrapper title={t`sectionNext-title-10`} description={t`sectionNext-title-11`} id="next">
       <Box>
         <Typography textAlign="center" marginBottom={1} variant="h6">
           {t`sectionNext-content-42`}
         </Typography>
-        <Typography
-          textAlign="center"
-          marginBottom={{ xs: 3, sm: 6 }}
-          variant="h6"
-        >
+        <Typography textAlign="center" marginBottom={{ xs: 3, sm: 6 }} variant="h6">
           <strong>{t`sectionNext-content-44`}</strong>
         </Typography>
       </Box>

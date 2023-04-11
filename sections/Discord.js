@@ -4,32 +4,16 @@ import { t } from '@lingui/macro';
 import { Step } from '../components/Stepper';
 import LightImage from '../components/LightImage';
 import { discordLink } from '../common/config';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from './Wrapper';
 
 export default function SectionDiscord() {
   return (
-    <SectionWrapper
-      title={t`sectionDiscord-title-10`}
-      description={t`sectionDiscord-title-11`}
-      id="discord"
-      sectionColor="#FBBD78"
-    >
+    <SectionWrapper title={t`sectionDiscord-title-10`} description={t`sectionDiscord-title-11`} id="discord" sectionColor="#FBBD78">
       <Box>
-        <Typography
-          textAlign="center"
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-        >
+        <Typography textAlign="center" variant={'h6'} component={'p'} color={'text.secondary'}>
           {t`sectionDiscord-title-15`}
         </Typography>
-        <Typography
-          textAlign="center"
-          marginBottom={{ xs: 6, sm: 10 }}
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-        >
+        <Typography textAlign="center" marginBottom={{ xs: 6, sm: 10 }} variant={'h6'} component={'p'} color={'text.secondary'}>
           {t`sectionDiscord-title-16`}
         </Typography>
       </Box>

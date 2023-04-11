@@ -11,10 +11,7 @@ function Home() {
   const theme = useTheme();
   const GridItemHeadlineBlock = () => {
     return (
-      <Box
-        paddingLeft={{ xs: '12px', sm: '20px' }}
-        paddingRight={{ xs: '12px', sm: '20px' }}
-      >
+      <Box paddingLeft={{ xs: '12px', sm: '20px' }} paddingRight={{ xs: '12px', sm: '20px' }}>
         <Typography
           variant="h3"
           align={'center'}
@@ -30,22 +27,11 @@ function Home() {
             component={'span'}
             variant={'inherit'}
             sx={{
-              background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                theme.palette.secondary.main,
-                0.3
-              )} 0%)`,
+              background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
               color: '#377dff',
             }}
           >
-            <Typed
-              strings={[
-                t`topSection-title-2`,
-                t`topSection-title-3`,
-                t`topSection-title-4`,
-              ]}
-              typeSpeed={80}
-              loop={true}
-            />
+            <Typed strings={[t`topSection-title-2`, t`topSection-title-3`, t`topSection-title-4`]} typeSpeed={80} loop={true} />
           </Typography>
         </Typography>
         <Typography
@@ -69,14 +55,7 @@ function Home() {
   };
 
   return (
-    <Box
-      minHeight="100vh"
-      display={'flex'}
-      justifyContent={'center'}
-      bgcolor={'alternate.main'}
-      position="relative"
-      flexDirection="column"
-    >
+    <Box minHeight="100vh" display={'flex'} justifyContent={'center'} bgcolor={'alternate.main'} position="relative" flexDirection="column">
       <Box width="100%" height="100%" display="flex" justifyContent={'center'}>
         <GridItemHeadlineBlock />
       </Box>

@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { useTheme } from '@mui/material/styles';
 import { t } from '@lingui/macro';
 import StyledToolTip from '../components/StyledToolTip';
-import SectionSimpleWrapper from './SectionSimpleWrapper';
+import SectionSimpleWrapper from './SimpleWrapper';
 
 const coreContributors = [
   {

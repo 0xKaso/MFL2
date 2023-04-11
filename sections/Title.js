@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 import Container from '../components/Container';
-import SectionArrowDown from './SectionArrowDown';
+import SectionArrowDown from './ArrowDown';
 
 export default function SectionTitle(props) {
   const theme = useTheme();
@@ -11,14 +11,7 @@ export default function SectionTitle(props) {
   return (
     <Container>
       <Box marginTop={20} borderRadius={10} bgcolor="#fff">
-        <Box
-          position="relative"
-          top={{ xs: '-100px', sm: '-118px' }}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-        >
+        <Box position="relative" top={{ xs: '-100px', sm: '-118px' }} display="flex" justifyContent="center" alignItems="center" flexDirection="column">
           <SectionArrowDown />
           <Typography
             paddingY={{ xs: 1, sm: 2 }}

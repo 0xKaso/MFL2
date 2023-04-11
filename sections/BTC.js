@@ -3,46 +3,26 @@ import React from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import FAQList from '../components/FAQList';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from './Wrapper';
 import { t } from '@lingui/macro';
 
 export default function SectionBTC() {
   const theme = useTheme();
 
   return (
-    <SectionWrapper
-      title={t`sectionBTC-title-10`}
-      description={t`sectionBTC-title-11`}
-      id="btc"
-      sectionColor="#FFFEA6"
-    >
+    <SectionWrapper title={t`sectionBTC-title-10`} description={t`sectionBTC-title-11`} id="btc" sectionColor="#FFFEA6">
       <Box marginBottom={{ xs: 6, sm: 10 }}>
-        <Typography
-          textAlign="center"
-          marginBottom={2}
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-        >
+        <Typography textAlign="center" marginBottom={2} variant={'h6'} component={'p'} color={'text.secondary'}>
           {t`sectionBTC-title-12`}
         </Typography>
-        <Typography
-          textAlign="center"
-          marginBottom={6}
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-        >
+        <Typography textAlign="center" marginBottom={6} variant={'h6'} component={'p'} color={'text.secondary'}>
           {t`sectionBTC-title-13`}
           <Typography
             color={'primary'}
             component={'span'}
             variant={'inherit'}
             sx={{
-              background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                theme.palette.secondary.main,
-                0.3
-              )} 0%)`,
+              background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
               color: '#377dff',
             }}
           >
@@ -56,23 +36,14 @@ export default function SectionBTC() {
           <Grid item xs={12} sm={6} md={6}>
             <Box width={1} height={1}>
               <Box display={'flex'} flexDirection={'column'}>
-                <Typography
-                  variant={'h6'}
-                  marginBottom={2}
-                  sx={{ fontWeight: 700, textAlign: 'center' }}
-                >
+                <Typography variant={'h6'} marginBottom={2} sx={{ fontWeight: 700, textAlign: 'center' }}>
                   {t`sectionBTC-content-10`}
                 </Typography>
                 <Typography marginBottom={2} color="text.secondary">
                   {t`sectionBTC-content-11`}
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                  <Box
-                    component="img"
-                    src="/images/reward.png"
-                    width={{ xs: '50%', sm: '60%' }}
-                    marginBottom={4}
-                  ></Box>
+                  <Box component="img" src="/images/reward.png" width={{ xs: '50%', sm: '60%' }} marginBottom={4}></Box>
                 </Box>
               </Box>
             </Box>
@@ -80,23 +51,14 @@ export default function SectionBTC() {
           <Grid item xs={12} sm={6} md={6}>
             <Box width={1} height={1}>
               <Box display={'flex'} flexDirection={'column'}>
-                <Typography
-                  variant={'h6'}
-                  marginBottom={2}
-                  sx={{ fontWeight: 700, textAlign: 'center' }}
-                >
+                <Typography variant={'h6'} marginBottom={2} sx={{ fontWeight: 700, textAlign: 'center' }}>
                   {t`sectionBTC-content-12`}
                 </Typography>
                 <Typography marginBottom={2} color="text.secondary">
                   {t`sectionBTC-content-13`}
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                  <Box
-                    component="img"
-                    src="/images/currency.png"
-                    width={{ xs: '50%', sm: '60%' }}
-                    marginBottom={4}
-                  ></Box>
+                  <Box component="img" src="/images/currency.png" width={{ xs: '50%', sm: '60%' }} marginBottom={4}></Box>
                 </Box>
               </Box>
             </Box>

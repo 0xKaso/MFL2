@@ -5,78 +5,40 @@ import List from '@mui/material/List';
 
 import ListItem from '../components/ListItem';
 import { Step } from '../components/Stepper';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from './Wrapper';
 
 export default function SectionDYOR() {
   return (
-    <SectionWrapper
-      title={t`sectionDYOR-title-10`}
-      description={t`sectionDYOR-title-11`}
-      id="dyor"
-      sectionColor="#CBCDFB"
-    >
-      <Box
-        marginBottom={{ xs: 4, sm: 6, md: 8 }}
-        sx={{ maxWidth: 680, margin: '0 auto' }}
-      >
-        <Typography
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-          align={'center'}
-          marginBottom={{ xs: 4, sm: 10 }}
-        >
+    <SectionWrapper title={t`sectionDYOR-title-10`} description={t`sectionDYOR-title-11`} id="dyor" sectionColor="#CBCDFB">
+      <Box marginBottom={{ xs: 4, sm: 6, md: 8 }} sx={{ maxWidth: 680, margin: '0 auto' }}>
+        <Typography variant={'h6'} component={'p'} color={'text.secondary'} align={'center'} marginBottom={{ xs: 4, sm: 10 }}>
           {t`sectionDYOR-title-12`}
         </Typography>
         <Box>
           <Step index={1} label={t`sectionDYOR-content-10`}>
             <Box display="flex" alignItems="flex-start" marginBottom={2}>
-              <Box
-                width="24px"
-                component={'img'}
-                flexShrink={0}
-                src={'/icons/right.svg'}
-                marginRight={1}
-              />
+              <Box width="24px" component={'img'} flexShrink={0} src={'/icons/right.svg'} marginRight={1} />
               <Typography variant="h7" component="p">
                 {t`sectionDYOR-content-11`}
               </Typography>
             </Box>
 
             <Box display="flex" alignItems="flex-start" marginBottom={2}>
-              <Box
-                width="24px"
-                component={'img'}
-                flexShrink={0}
-                src={'/icons/right.svg'}
-                marginRight={1}
-              />
+              <Box width="24px" component={'img'} flexShrink={0} src={'/icons/right.svg'} marginRight={1} />
               <Typography variant="h7" component="p">
                 {t`sectionDYOR-content-12`}
               </Typography>
             </Box>
 
             <Box display="flex" alignItems="flex-start" marginBottom={2}>
-              <Box
-                width="24px"
-                component={'img'}
-                flexShrink={0}
-                src={'/icons/right.svg'}
-                marginRight={1}
-              />
+              <Box width="24px" component={'img'} flexShrink={0} src={'/icons/right.svg'} marginRight={1} />
               <Typography variant="h7" component="p">
                 {t`sectionDYOR-content-13`}
               </Typography>
             </Box>
 
             <Box display="flex" alignItems="flex-start" marginBottom={2}>
-              <Box
-                width="24px"
-                component={'img'}
-                flexShrink={0}
-                src={'/icons/wrong.svg'}
-                marginRight={1}
-              />
+              <Box width="24px" component={'img'} flexShrink={0} src={'/icons/wrong.svg'} marginRight={1} />
               <Typography variant="h7" component="p">
                 <del>{t`sectionDYOR-content-14`}</del>
               </Typography>
@@ -105,13 +67,7 @@ export default function SectionDYOR() {
             </List>
           </Step>
         </Box>
-        <Typography
-          variant={'h5'}
-          component={'p'}
-          align={'center'}
-          marginTop={{ xs: 0, sm: 4 }}
-          marginBottom={{ xs: 6, sm: 10 }}
-        >
+        <Typography variant={'h5'} component={'p'} align={'center'} marginTop={{ xs: 0, sm: 4 }} marginBottom={{ xs: 6, sm: 10 }}>
           {t`sectionDYOR-content-25`}
           <strong>{t`sectionDYOR-content-26`}</strong>
           <br />
@@ -123,27 +79,13 @@ export default function SectionDYOR() {
         </List>
         <Typography color={'text.secondary'} marginTop={2}>
           {t`sectionDYOR-web3-glossary`}
-          <Link
-            color="#377dff"
-            marginRight="10px"
-            target="_blank"
-            href={'https://twitter.com/punk6529/status/1433002033242595338'}
-          >
+          <Link color="#377dff" marginRight="10px" target="_blank" href={'https://twitter.com/punk6529/status/1433002033242595338'}>
             {t`sectionDYOR-web3-glossary-link-1`}
           </Link>
-          <Link
-            color="#377dff"
-            marginRight="10px"
-            target="_blank"
-            href={'https://unstoppabledomains.com/blog/the-web3-glossary'}
-          >
+          <Link color="#377dff" marginRight="10px" target="_blank" href={'https://unstoppabledomains.com/blog/the-web3-glossary'}>
             {t`sectionDYOR-web3-glossary-link-2`}
           </Link>
-          <Link
-            color="#377dff"
-            target="_blank"
-            href={'https://github.com/WTFAcademy/WTF-gm'}
-          >
+          <Link color="#377dff" target="_blank" href={'https://github.com/WTFAcademy/WTF-gm'}>
             {t`sectionDYOR-web3-glossary-link-3`}
           </Link>
         </Typography>
